@@ -336,17 +336,17 @@ export default function App() {
           {/* Real-time Simulated Stadium Telemetry */}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4 font-mono text-xs bg-slate-950/60 p-2 rounded-lg border border-slate-800">
             <div className="px-3 py-1 border-r border-slate-800">
-              <span className="text-slate-500 block uppercase text-[9px]">Venue</span>
+              <span className="text-slate-300 block uppercase text-[9px] font-bold">Venue</span>
               <span className="text-slate-200 font-semibold block truncate">MetLife Stadium, NYNJ</span>
             </div>
             <div className="px-3 py-1 sm:border-r border-slate-800">
-              <span className="text-slate-500 block uppercase text-[9px]">Live Attendance</span>
+              <span className="text-slate-300 block uppercase text-[9px] font-bold">Live Attendance</span>
               <span className="text-amber-400 font-bold block">
                 {stadiumAttendance.toLocaleString()} / 82,500
               </span>
             </div>
             <div className="col-span-2 sm:col-span-1 px-3 py-1 flex items-center justify-between sm:block bg-amber-500/5 sm:bg-transparent rounded sm:rounded-none">
-              <span className="text-slate-500 block uppercase text-[9px]">Local Match Day</span>
+              <span className="text-slate-300 block uppercase text-[9px] font-bold">Local Match Day</span>
               <span className="text-slate-200 font-semibold block">MD 12 • Live (EST)</span>
             </div>
           </div>
@@ -395,7 +395,7 @@ export default function App() {
                   Multilingual Fan Scenarios
                 </h2>
               </div>
-              <p className="text-xs text-slate-400 mb-3 leading-relaxed">
+              <p className="text-xs text-slate-300 mb-3 leading-relaxed">
                 Choose one of the real international fan reports from the list below to observe translation, priority routing, and crowd avoidance instantly:
               </p>
               
@@ -412,7 +412,7 @@ export default function App() {
                         {sample.label}
                       </span>
                     </div>
-                    <ChevronRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-amber-400 transition-colors shrink-0" />
+                    <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-amber-400 transition-colors shrink-0" />
                   </button>
                 ))}
               </div>
@@ -427,7 +427,7 @@ export default function App() {
                     Operational Ingestion Console
                   </h2>
                 </div>
-                <span className="text-[10px] font-mono text-slate-500">Manual Override</span>
+                <span className="text-[10px] font-mono text-slate-300 font-semibold">Manual Override</span>
               </div>
 
               {/* Fan Report Text Area */}
@@ -442,11 +442,11 @@ export default function App() {
                     onChange={(e) => setInputText(e.target.value)}
                     rows={4}
                     maxLength={500}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-sm text-slate-100 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all font-sans placeholder:text-slate-600"
+                    className="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-sm text-slate-100 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all font-sans placeholder:text-slate-400"
                     placeholder="Enter raw fan message or report regarding queues, stadium bottlenecks, gates, safety..."
                     required
                   />
-                  <div className="absolute bottom-2.5 right-2.5 text-[10px] text-slate-500 font-mono">
+                  <div className="absolute bottom-2.5 right-2.5 text-[10px] text-slate-300 font-mono">
                     {inputText.length}/500 chars
                   </div>
                 </div>
@@ -529,7 +529,7 @@ export default function App() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
               </div>
-              <p className="text-xs text-slate-400 mb-4 leading-relaxed">
+              <p className="text-xs text-slate-300 mb-4 leading-relaxed">
                 Live congestion indexes parsed from stadium pressure mats, Wi-Fi handshakes, and gate turnstile sensors:
               </p>
 
@@ -540,10 +540,10 @@ export default function App() {
                   return (
                     <div key={g.id} className="p-2.5 rounded-lg bg-slate-950/60 border border-slate-850 flex items-center justify-between">
                       <div className="truncate pr-1">
-                        <span className="text-slate-400 font-semibold block truncate text-[10px]">
+                        <span className="text-slate-300 font-bold block truncate text-[10px]">
                           {g.name.split(" (")[0]}
                         </span>
-                        <span className="text-[9px] text-slate-500">
+                        <span className="text-[9px] text-slate-400 font-medium">
                           {g.amenities[0]}
                         </span>
                       </div>
@@ -610,7 +610,7 @@ export default function App() {
                     {/* Translated Fan Insight */}
                     <div className="space-y-4">
                       <div>
-                        <span className="text-[10px] font-mono uppercase text-slate-500 tracking-wider block mb-1">
+                        <span className="text-[10px] font-mono uppercase text-slate-300 font-bold tracking-wider block mb-1">
                           Enterprise Translation (English Target)
                         </span>
                         <p className="text-sm text-slate-100 font-medium leading-relaxed italic bg-slate-950/60 p-4 rounded-xl border border-slate-850 border-l-4 border-l-amber-500" aria-live="polite">
@@ -622,7 +622,7 @@ export default function App() {
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {/* Routed Dispatch Department */}
                         <div className="bg-slate-950/50 p-4 rounded-xl border border-slate-850">
-                          <span className="text-[10px] font-mono uppercase text-slate-500 tracking-wider block mb-2">
+                          <span className="text-[10px] font-mono uppercase text-slate-300 font-bold tracking-wider block mb-2">
                             Routed Dispatch Unit
                           </span>
                           <div className="flex items-center gap-3">
@@ -641,7 +641,7 @@ export default function App() {
                               <span className="text-sm font-bold text-white block">
                                 {activeRouteResult.routed_department.replace("_", " ")}
                               </span>
-                              <span className="text-[10px] text-slate-400 block flex items-center gap-1 mt-0.5">
+                              <span className="text-[10px] text-slate-300 block font-semibold flex items-center gap-1 mt-0.5">
                                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                                 Standby Marshals Mobilized
                               </span>
@@ -651,7 +651,7 @@ export default function App() {
 
                         {/* Local IoT Congestion Gauge */}
                         <div className="bg-slate-950/50 p-4 rounded-xl border border-slate-850">
-                          <span className="text-[10px] font-mono uppercase text-slate-500 tracking-wider block mb-1">
+                          <span className="text-[10px] font-mono uppercase text-slate-300 font-bold tracking-wider block mb-1">
                             Local Gate IoT Crowd Density
                           </span>
                           <div className="flex items-center justify-between mb-1.5">
@@ -834,13 +834,13 @@ export default function App() {
                     Real-Time Dispatch Feed & Resolution Log
                   </h2>
                 </div>
-                <span className="text-[10px] font-mono text-slate-500">Last 5 Activities</span>
+                <span className="text-[10px] font-mono text-slate-300 font-semibold">Last 5 Activities</span>
               </div>
 
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs font-mono" role="table">
                   <thead>
-                    <tr className="border-b border-slate-800 text-slate-400 uppercase text-[10px]">
+                    <tr className="border-b border-slate-800 text-slate-200 uppercase text-[10px] font-bold">
                       <th className="pb-2.5 font-bold">Time</th>
                       <th className="pb-2.5 font-bold">Loc</th>
                       <th className="pb-2.5 font-bold">Incident (Translated)</th>
