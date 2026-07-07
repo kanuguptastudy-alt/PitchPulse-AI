@@ -473,12 +473,13 @@ export default function App() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 uppercase font-mono mb-2">
+                  <span className="block text-xs font-bold text-slate-300 uppercase font-mono mb-2">
                     Accessibility Parameters
-                  </label>
+                  </span>
                   <button
                     type="button"
                     onClick={() => setRequiresAccessibility(!requiresAccessibility)}
+                    aria-pressed={requiresAccessibility}
                     className={`w-full flex items-center justify-between px-3 py-2.5 rounded-lg border transition-all text-xs font-medium font-mono ${
                       requiresAccessibility
                         ? "bg-amber-500/20 border-amber-500 text-amber-300"
@@ -712,7 +713,7 @@ export default function App() {
                           Aerial Footprint View
                         </span>
                         
-                        <svg viewBox="0 0 700 520" className="w-full max-w-[280px] h-auto drop-shadow-lg">
+                        <svg role="img" aria-label="Stadium gate occupancy map" viewBox="0 0 700 520" className="w-full max-w-[280px] h-auto drop-shadow-lg">
                           {/* Outer circular perimeter */}
                           <circle cx="350" cy="260" r="230" fill="none" stroke="#1e293b" strokeWidth="4" />
                           <circle cx="350" cy="260" r="230" fill="none" stroke="#f59e0b" strokeWidth="2" strokeDasharray="8,6" opacity="0.3" />
