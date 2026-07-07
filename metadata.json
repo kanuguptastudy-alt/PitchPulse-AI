@@ -1,0 +1,6 @@
+{
+  "name": "PitchPulse AI",
+  "description": "FIFA World Cup 2026 Stadium Operations - Multilingual Fan Navigation & Operational Intelligence with dynamic IoT crowd-density analysis and real-time staff routing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
